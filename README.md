@@ -24,9 +24,7 @@ For some cases, there will be jQuery with Bootstrap available.
 - `php artisan passport:install` (with --uuids if you want them)
 - `php artisan optimize:full`
 
-own optimizer command which sums up artisans optimizes.
-
-
+## Composer packages included
 composer require spatie/laravel-translatable - translate options of a model to be different names
 https://github.com/spatie/laravel-translatable
 
