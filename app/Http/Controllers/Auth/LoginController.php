@@ -97,4 +97,12 @@ class LoginController extends Controller
     {
         $this->guard()->logout();
     }
+
+    /** returns the user variable.
+     * @param Request $request
+     * @return mixed
+     */
+    public function user(Request $request) {
+        return $request->user();
+    }
 }

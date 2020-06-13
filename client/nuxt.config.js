@@ -63,13 +63,14 @@ module.exports = {
     generate: {
       done (generator) {
         // Copy dist files to public/_nuxt
-        if (generator.nuxt.options.dev === false && generator.nuxt.options.mode === 'spa') {
+        //uncomment if testing on 3001 (switch mode to 'spa' or 'ssr' depending on needs)
+        //if (generator.nuxt.options.dev === false && generator.nuxt.options.mode === 'spa') {
           const publicDir = join(generator.nuxt.options.rootDir, 'public', '_nuxt')
           removeSync(publicDir)
           copySync(join(generator.nuxt.options.generate.dir, '_nuxt'), publicDir)
           copySync(join(generator.nuxt.options.generate.dir, '200.html'), join(publicDir, 'index.html'))
           removeSync(generator.nuxt.options.generate.dir)
-        }
+        //}
       }
     }
   }

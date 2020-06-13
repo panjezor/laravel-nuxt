@@ -23,7 +23,7 @@
       </div>
 
       <div class="links">
-        <a href="https://github.com/cretueusebiu/laravel-nuxt">github.com/cretueusebiu/laravel-nuxt</a>
+        <a href="https://github.com/panjezor/laravel-nuxt">github.com/panjezor/laravel-nuxt</a>
       </div>
     </div>
   </div>
