@@ -7,7 +7,7 @@ module.exports = {
     port: 3001, // default: 3000
     host: '0.0.0.0' // default: localhost
   },
-  //mode: 'spa', // Comment this for SSR
+  mode: 'spa', // Comment this for SSR
 
   srcDir: __dirname,
 
@@ -47,7 +47,7 @@ module.exports = {
     '~plugins/vform',
     '~plugins/axios',
     '~plugins/fontawesome',
-    //'~plugins/nuxt-client-init', // Comment this for SSR
+    '~plugins/nuxt-client-init', // Comment this for SSR
     { src: '~plugins/bootstrap', mode: 'client' }
   ],
 
@@ -64,13 +64,13 @@ module.exports = {
       done (generator) {
         // Copy dist files to public/_nuxt
         //uncomment if testing on 3001 (switch mode to 'spa' or 'ssr' depending on needs)
-        //if (generator.nuxt.options.dev === false && generator.nuxt.options.mode === 'spa') {
+        if (generator.nuxt.options.dev === false && generator.nuxt.options.mode === 'spa') {
           const publicDir = join(generator.nuxt.options.rootDir, 'public', '_nuxt')
           removeSync(publicDir)
           copySync(join(generator.nuxt.options.generate.dir, '_nuxt'), publicDir)
           copySync(join(generator.nuxt.options.generate.dir, '200.html'), join(publicDir, 'index.html'))
           removeSync(generator.nuxt.options.generate.dir)
-        //}
+        }
       }
     }
   }
