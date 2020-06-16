@@ -17,7 +17,7 @@ If you don't do SPA, you will have to create a js file for every other page as u
 
 For some cases, there will be jQuery with Bootstrap available.
 
-
+EXPLICITLY SET ENV in nuxt.config.js
 
 - `php artisan migrate`
 - `npm install`

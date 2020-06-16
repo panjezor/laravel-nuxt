@@ -12,8 +12,8 @@ module.exports = {
   srcDir: __dirname,
 
   env: {
-    apiUrl: process.env.API_URL || process.env.APP_URL + '/api',
-    appName: process.env.APP_NAME || 'Laravel Nuxt',
+    apiUrl: "https://wirtualny-broker.com/api", // could be swapped over to string exchange(https instead of http) process.env.API_URL || ... APP_URL+/api
+    appName: "Laravel Nuxt base",
     appLocale: process.env.APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },
